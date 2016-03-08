@@ -1,5 +1,5 @@
 <?php
-
+//test
 class Wpi_Post_Init {
 
     public function __construct() {
