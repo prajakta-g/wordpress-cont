@@ -1,0 +1,16 @@
+.twocol {display:inline-block;width:48%;margin:10px;padding:4px;}
+
+.contributorbox {
+    background-color: lightgrey;
+    /*width: 300px;*/
+    padding: 25px;
+    border: 11px solid navy;
+    margin: 25px;
+}
+
+.contributorlabel {	
+
+    color:red;
+    font-size:22px;
+}
+
