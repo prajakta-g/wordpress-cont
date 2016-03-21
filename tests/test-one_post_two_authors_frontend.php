@@ -6,8 +6,7 @@ class Tests_One_Post_Two_Authors extends WP_UnitTestCase {
     protected $author_id = 0;
     protected $author_id_2 = 0;
     protected $post_id = 0;
-    private $permalink_structure;
-
+    
     function setUp() {
         parent::setUp();
 

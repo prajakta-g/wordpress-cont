@@ -3,7 +3,6 @@
 //testcase: one post and no author
 class Tests_One_Post_No_Author extends WP_UnitTestCase {
 
-    //protected $author_id = 0;
     protected $post_id = 0;
     private $permalink_structure;
 
