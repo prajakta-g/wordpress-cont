@@ -4,8 +4,7 @@
 class Tests_One_Post_No_Author extends WP_UnitTestCase {
 
     protected $post_id = 0;
-    private $permalink_structure;
-
+    
     function setUp() {
         parent::setUp();
 
@@ -26,7 +25,7 @@ class Tests_One_Post_No_Author extends WP_UnitTestCase {
     function test_post_content() {
         $pinstance1 = new Wpi_Post_Init();
         $content_post = get_post($this->post_id);
-//checks if post contains only content and no contibutor box		
+        //checks if post contains only content and no contibutor box		
         $this->assertContains('Test Content', $pinstance1->wpi_display_meta($content_post->post_content));
         $this->assertEmpty(get_post_meta($this->post_id, '_custom-meta-box', true));
         $value = get_post_meta($this->post_id, '_custom-meta-box', true);
