@@ -1,5 +1,4 @@
 <?php
-
 /*
   Plugin Name: WordPress Contributors
   Description: This plugin displays more than one author-name on a post
@@ -11,7 +10,19 @@
   Plugin URI:
   tags:User Profiles
  */
-
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+/**
+ * The interface that defines the functions for the meta box.
+ */
+include_once( plugin_dir_path(__FILE__) . '/interface-meta-box.php' ); 
+ 
 include(plugin_dir_path(__FILE__) . "/wp-contributors-init.php");
+
+function mbe_start() {
 $pinstance = new Wpi_Post_Init();
+}
+mbe_start();
 ?>
