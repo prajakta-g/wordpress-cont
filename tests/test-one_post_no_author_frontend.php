@@ -5,7 +5,7 @@ class Tests_One_Post_No_Author extends WP_UnitTestCase {
 
     protected $post_id = 0;
     
-    function setUp() {
+    public function setUp() {
         parent::setUp();
 
 
@@ -22,7 +22,7 @@ class Tests_One_Post_No_Author extends WP_UnitTestCase {
         setup_postdata(get_post($this->post_id));
     }
 
-    function test_post_content() {
+    public function test_post_content() {
         $pinstance1 = new Wpi_Post_Init();
         $content_post = get_post($this->post_id);
         //checks if post contains only content and no contibutor box		

@@ -7,7 +7,7 @@ class Tests_One_Post_Two_Authors extends WP_UnitTestCase {
     protected $author_id_2 = 0;
     protected $post_id = 0;
     
-    function setUp() {
+    public function setUp() {
         parent::setUp();
 
         $this->author_id = self::factory()->user->create(array(
@@ -38,7 +38,7 @@ class Tests_One_Post_Two_Authors extends WP_UnitTestCase {
         setup_postdata(get_post($this->post_id));
     }
 
-    function test_post_content() {
+    public function test_post_content() {
 
         $author = array($this->author_id, $this->author_id_2);
         add_post_meta($this->post_id, '_custom-meta-box', $author, true);
@@ -58,7 +58,7 @@ class Tests_One_Post_Two_Authors extends WP_UnitTestCase {
         $this->assertEquals(preg_match_all('/(http).*?((?:\\/[\\w\\.\\-]+)+).*?(\\?)(author)(=)(\\d+)/', $pinstance->wpi_author_display_block(get_post_meta($this->post_id, '_custom-meta-box', true))), 2);
     }
 
-    function test_author_count() {
+    public function test_author_count() {
         $pinstance = new Wpi_Post_Init();
         $value = $pinstance->wpi_get_all_authors();
 //checks for authors not equal to zero and equal to 2
