@@ -16,14 +16,14 @@ class Tests_One_Post_Two_Authors extends WP_UnitTestCase {
             'user_login' => 'test_author',
             'description' => 'test_author',
                 ));
-        $user = new WP_User($this->author_id);
+       
 
         $this->author_id_2 = self::factory()->user->create(array(
             'role' => 'author',
             'user_login' => 'test_author_two',
             'description' => 'test_author_two',
                 ));
-        $user = new WP_User($this->author_id_2);
+        
 
         $post = array(
             'post_author' => $this->author_id,
