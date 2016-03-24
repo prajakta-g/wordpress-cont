@@ -22,9 +22,9 @@ include_once( plugin_dir_path(__FILE__) . '/interface-meta-box.php' );
 
 include(plugin_dir_path(__FILE__) . "/wp-contributors-init.php");
 
-function mbe_start() {
+function wpi_start() {
     $pinstance = new Wpi_Post_Init();
 }
 
-mbe_start();
+wpi_start();
 ?>

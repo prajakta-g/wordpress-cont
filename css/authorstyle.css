@@ -1,16 +1,36 @@
-.twocol {display:inline-block;width:48%;margin:10px;padding:4px;}
+.contributorbox .twocol {display:inline-block;width:48%;margin:6px;padding:4px;}
 
 .contributorbox {
-    background-color: lightgrey;
-    /*width: 300px;*/
-    padding: 25px;
-    border: 11px solid navy;
-    margin: 25px;
+    background-color: #eaeaea;
+    max-width: 100%;
+    padding: 5px;
 }
 
-.contributorlabel {	
+.contributorbox ul.list-group{
+    margin:0;}
 
-    color:red;
-    font-size:22px;
+.contributorbox.list-group-item{
+    margin:5px;
 }
 
+.contributorlabel {
+    color: #4f4b4c;
+    font-size: 22px;
+    margin: 8px;
+}
+
+.list-group-item img{
+    float:left;
+}
+
+.list-group-item a{
+    float:left;
+    padding:33px 59px;
+}
+
+@media (max-width: 540px) {
+    .contributorbox .twocol {
+        margin:0;
+        width:100%
+    }
+}

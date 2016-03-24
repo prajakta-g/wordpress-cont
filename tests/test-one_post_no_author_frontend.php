@@ -4,7 +4,7 @@
 class Tests_One_Post_No_Author extends WP_UnitTestCase {
 
     protected $post_id = 0;
-    
+
     public function setUp() {
         parent::setUp();
 
@@ -22,6 +22,7 @@ class Tests_One_Post_No_Author extends WP_UnitTestCase {
         setup_postdata(get_post($this->post_id));
     }
 
+//testing wpi_display_meta() and wpi_author_display_block() methods
     public function test_post_content() {
         $pinstance1 = new Wpi_Post_Init();
         $content_post = get_post($this->post_id);

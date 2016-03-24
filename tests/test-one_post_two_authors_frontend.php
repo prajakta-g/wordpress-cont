@@ -6,7 +6,7 @@ class Tests_One_Post_Two_Authors extends WP_UnitTestCase {
     protected $author_id = 0;
     protected $author_id_2 = 0;
     protected $post_id = 0;
-    
+
     public function setUp() {
         parent::setUp();
 
@@ -14,15 +14,15 @@ class Tests_One_Post_Two_Authors extends WP_UnitTestCase {
             'role' => 'author',
             'user_login' => 'test_author',
             'description' => 'test_author',
-                ));
-       
+        ));
+
 
         $this->author_id_2 = self::factory()->user->create(array(
             'role' => 'author',
             'user_login' => 'test_author_two',
             'description' => 'test_author_two',
-                ));
-        
+        ));
+
 
         $post = array(
             'post_author' => $this->author_id,
@@ -38,6 +38,7 @@ class Tests_One_Post_Two_Authors extends WP_UnitTestCase {
         setup_postdata(get_post($this->post_id));
     }
 
+//testing wpi_display_meta() and wpi_author_display_block() methods
     public function test_post_content() {
 
         $author = array($this->author_id, $this->author_id_2);
